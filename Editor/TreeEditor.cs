@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Flower))]
-public class FlowerEditor : Editor
+[CustomEditor(typeof(Tree))]
+public class TreeEditor : Editor
 {
-    private Flower myPlant;
+    private Tree myPlant;
     // Spawn Seed Delay Settings
     float ssdMinLimit = 0;
     float ssdMaxLimit = 30;
@@ -16,7 +16,7 @@ public class FlowerEditor : Editor
 
     private void OnEnable()
     {
-        myPlant = (Flower)target;
+        myPlant = (Tree)target;
 
     }
 
