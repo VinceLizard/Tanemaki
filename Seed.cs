@@ -1,11 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Seed : MonoBehaviour
 {
-
     Rigidbody rb;
 	CharacterController controller;
 
@@ -22,9 +19,7 @@ public class Seed : MonoBehaviour
 	public int SeedHealth { get { return seedHealth; } }
     private AudioSource audioSource;
 
-    float X;
-    float Y;
-    float Z;
+    float X, Y, Z;
 
     // Start is called before the first frame update
     void Awake()
@@ -52,7 +47,6 @@ public class Seed : MonoBehaviour
         rb.AddForce(X, Y, Z, ForceMode.Impulse);
         StartCoroutine("CrazyWalk");
     }
-
 
     void PlayRandomClip(AudioClip[] audioclipArray)
     {
@@ -121,7 +115,5 @@ public class Seed : MonoBehaviour
 		{
 			controller.SimpleMove(this.transform.forward * escapeSpeed);
 		}
-
-
 	}
 }
